@@ -1,3 +1,4 @@
+
 For this problem, we will be writing a function which takes
 two rectangles, determines the region in which they overlap
 (which is also a rectangle), and returns that region.
