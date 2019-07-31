@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 //I've provided "min" and "max" functions in
 //case they are useful to you
 int min (int a, int b) {
@@ -8,6 +9,7 @@ int min (int a, int b) {
   }
   return b;
 }
+
 int max (int a, int b) {
   if (a > b) {
     return a;
@@ -16,15 +18,51 @@ int max (int a, int b) {
 }
 
 //Declare your rectangle structure here!
-
+typedef struct Rectangles {
+  int x;
+  int y;
+  int width;
+  int height;
+} rectangle;
 
 rectangle canonicalize(rectangle r) {
-  //WRITE THIS FUNCTION
+  if (r.width < 0) {
+    // Sum up x and width. This gives the new x.
+    // New width is then the old x reduced by the new x.
+    int tmp_x = r.x + r.width;
+    r.width = r.x - tmp_x;
+    r.x = tmp_x;
+  }
+  if (r.height < 0) {
+    // Sum up y and heigth. This gives the new y.
+    // New heigth is then the old y reduced by the new y.
+    int tmp_y = r.y + r.height;
+    r.height = r.y - tmp_y;
+    r.y = tmp_y;
+  }
   return r;
 }
+
 rectangle intersection(rectangle r1, rectangle r2) {
-  //WRITE THIS FUNCTION
-  return r1;
+  rectangle r;
+
+  r1 = canonicalize(r1);
+  r2 = canonicalize(r2);
+  r.x = max(r1.x, r2.x);
+  r.y = max(r1.y, r2.y);
+  r.width = min(r1.x + r1.width, r2.x + r2.width) - r.x;
+  r.height = min(r1.y + r1.height, r2.y + r2.height) - r.y;
+  // Only for debugging
+  /*printf("r.x: %d\n", r.x);
+  printf("r.y: %d\n", r.y);
+  printf("r.width: %d\n", r.width);
+  printf("r.height: %d\n", r.height);*/
+  if (r.width < 0 || r.height < 0) {
+    // No intersection rectangle
+    r.width = 0;
+    r.height = 0;
+  }
+  return r;
 }
 
 //You should not need to modify any code below this line
@@ -143,5 +181,4 @@ int main (void) {
 
 
   return EXIT_SUCCESS;
-
 }
