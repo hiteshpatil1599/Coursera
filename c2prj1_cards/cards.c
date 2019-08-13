@@ -12,14 +12,14 @@ void assert_card_valid(card_t c) {
 const char * ranking_to_string(hand_ranking_t r) {
   char *c;
   switch(r){
-  case  STRAIGHT_FLUSH: c = "Five cards of the same suit that are also sequentially ordered"; break;
-  case  FOUR_OF_A_KIND: c = "Four cards of the same value"; break;
-  case  FULL_HOUSE: c = "Three cards of one value and a pair of another value"; break;
-  case  FLUSH: c = "Five cards of the same suit"; break;
-  case  STRAIGHT: c = "Five cards such that the cards are sequentially ordered"; break;
-  case  THREE_OF_A_KIND: c = "Three cards of the same value"; break;
-  case  TWO_PAIR: c = "Two times two cards of the same value"; break;
-  case  PAIR: c = "Two cards of the same value"; break;
+  case  STRAIGHT_FLUSH: c = "STRAIGHT_FLUSH"; break;
+  case  FOUR_OF_A_KIND: c = "FOUR_OF_A_KIND"; break;
+  case  FULL_HOUSE: c = "FULL_HOUSE"; break;
+  case  FLUSH: c = "FLUSH"; break;
+  case  STRAIGHT: c = "STRAIGHT"; break;
+  case  THREE_OF_A_KIND: c = "THREE_OF_A_KIND"; break;
+  case  TWO_PAIR: c = "TWO_PAIR"; break;
+  case  PAIR: c = "PAIR"; break;
   case  NOTHING: c = ""; break;    
   }
   return c;
