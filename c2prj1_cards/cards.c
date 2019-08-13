@@ -87,7 +87,7 @@ card_t card_from_letters(char value_let, char suit_let) {
     case 'c': temp.suit = CLUBS; break;
   }
   
-  assert_card_valid(temp);
+  //assert_card_valid(temp);
   return temp;
 }
 
