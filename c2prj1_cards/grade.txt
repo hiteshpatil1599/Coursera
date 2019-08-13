@@ -1,22 +1,12 @@
-Grading at Tue Aug 13 21:57:27 UTC 2019
+Grading at Tue Aug 13 21:59:16 UTC 2019
 Compiling cards.c
 Testing card_from_letters
-For card_from_letters('0','c'), I expected 0c but got 0c
-For card_from_letters('0','d'), I expected 0d but got 0d
-For card_from_letters('0','h'), I expected 0h but got 0h
-For card_from_letters('0','s'), I expected 0s but got 0?
-For card_from_letters('2','s'), I expected 2s but got 2?
-For card_from_letters('3','s'), I expected 3s but got 3?
-For card_from_letters('4','s'), I expected 4s but got 4?
-For card_from_letters('5','s'), I expected 5s but got 5?
-For card_from_letters('6','s'), I expected 6s but got 6?
-For card_from_letters('7','s'), I expected 7s but got 7?
-For card_from_letters('8','s'), I expected 8s but got 8?
-For card_from_letters('9','s'), I expected 9s but got 9?
-For card_from_letters('A','s'), I expected As but got A?
-For card_from_letters('J','s'), I expected Js but got J?
-For card_from_letters('K','s'), I expected Ks but got K?
-For card_from_letters('Q','s'), I expected Qs but got Q?
+Passed
+Testing value_letter and suit_letter
+For 0s, you gave value = O, suit = s
+For 0h, you gave value = O, suit = h
+For 0d, you gave value = O, suit = d
+For 0c, you gave value = O, suit = c
 Failed
 
 Overall Grade: FAILED
