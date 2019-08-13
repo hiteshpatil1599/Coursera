@@ -72,7 +72,6 @@ card_t card_from_letters(char value_let, char suit_let) {
   } else {
     switch(value_let) {
       case 'O': temp.value = 10; break;
-      case '10': temp.value = 10; break;
       case 'J': temp.value = 11; break;
       case 'Q': temp.value = 12; break;
       case 'K': temp.value = 13; break;
@@ -82,7 +81,7 @@ card_t card_from_letters(char value_let, char suit_let) {
   }
 
   switch(suit_let) {
-    case 's': temp.suit = SPADES; break;
+    case 's': temp.suit = 5; break;
     case 'h': temp.suit = HEARTS; break;
     case 'd': temp.suit = DIAMONDS; break;
     case 'c': temp.suit = CLUBS; break;
