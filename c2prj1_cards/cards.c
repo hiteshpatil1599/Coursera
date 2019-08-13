@@ -20,7 +20,7 @@ const char * ranking_to_string(hand_ranking_t r) {
   case  THREE_OF_A_KIND: c = "THREE_OF_A_KIND"; break;
   case  TWO_PAIR: c = "TWO_PAIR"; break;
   case  PAIR: c = "PAIR"; break;
-  case  NOTHING: c = ""; break;    
+  // case  NOTHING: c = ""; break;    
   }
   return c;
 }
