@@ -1,12 +1,23 @@
-Grading at Tue Aug 13 21:59:16 UTC 2019
+Grading at Tue Aug 13 22:02:26 UTC 2019
 Compiling cards.c
 Testing card_from_letters
 Passed
 Testing value_letter and suit_letter
-For 0s, you gave value = O, suit = s
-For 0h, you gave value = O, suit = h
-For 0d, you gave value = O, suit = d
-For 0c, you gave value = O, suit = c
+Passed
+Testing print_card
+Passed
+Testing card_from_num
+Passed
+Testing ranking_to_string
+ranking_to_string(STRAIGHT_FLUSH) resulted in Five cards of the same suit that are also sequentially ordered (Incorrect)
+ranking_to_string(FOUR_OF_A_KIND) resulted in Four cards of the same value (Incorrect)
+ranking_to_string(FULL_HOUSE) resulted in Three cards of one value and a pair of another value (Incorrect)
+ranking_to_string(FLUSH) resulted in Five cards of the same suit (Incorrect)
+ranking_to_string(STRAIGHT) resulted in Five cards such that the cards are sequentially ordered (Incorrect)
+ranking_to_string(THREE_OF_A_KIND) resulted in Three cards of the same value (Incorrect)
+ranking_to_string(TWO_PAIR) resulted in Two times two cards of the same value (Incorrect)
+ranking_to_string(PAIR) resulted in Two cards of the same value (Incorrect)
+ranking_to_string(NOTHING) resulted in  (Incorrect)
 Failed
 
 Overall Grade: FAILED
