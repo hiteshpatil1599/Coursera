@@ -34,7 +34,7 @@ char value_letter(card_t c) {
     letter = c.value + '0';
   } else {
       switch(c.value){
-        case 10: letter = 'O'; break;
+        case 10: letter = '0'; break;
         case 11: letter = 'J'; break;
         case 12: letter = 'Q'; break;
         case 13: letter = 'K'; break;
@@ -72,7 +72,6 @@ card_t card_from_letters(char value_let, char suit_let) {
   } else {
     switch(value_let) {
       case '0': temp.value = 10; break;
-      case 'O': temp.value = 10; break;
       case 'J': temp.value = 11; break;
       case 'Q': temp.value = 12; break;
       case 'K': temp.value = 13; break;
