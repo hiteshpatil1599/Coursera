@@ -1,4 +1,0 @@
-Grading at Fri Jun 26 06:03:38 UTC 2020
-Your file matched the expected output
-
-Overall Grade: PASSED
