@@ -42,7 +42,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
     //count from 0 to w. Call the number you count with x
     for(int x=0; x< w; x++) {
       //check if  EITHER
-      if((isInRange(x, x_offset, w) && isAtBorder(y, y_offset, h-1)) || (isInRange(y, y_offset, h) && isAtBorder(x, x_offset, w-1)))
+      if((isInRange(x, x_offset, x_offset+size2) && isAtBorder(y, y_offset, y_offset+size2-1)) || (isInRange(y, y_offset, y_offset+size2) && isAtBorder(x, x_offset, x_offset+size2-1)))
 	printf("*");
       //    ((x is between x_offset  and x_offset +size2) AND 
       //     y is equal to either y_offset OR y_offset + size2 - 1 )
