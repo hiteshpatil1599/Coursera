@@ -34,9 +34,9 @@ int max (int num1, int num2) {
 
 void squares(int size1, int x_offset, int y_offset, int size2) {
   //compute the max of size1 and (x_offset + size2).  Call this w
-  int w = max(x_offset, x_offset+size2) ;
+  int w = max(size1, x_offset+size2) ;
   //compute the max of size1 and (y_offset + size2).  Call this h
-  int h = max(y_offset, y_offset+size2) ;
+  int h = max(size1, y_offset+size2) ;
   //count from 0 to h. Call the number you count with y
   for(int y=0; y< h; y++) {
     //count from 0 to w. Call the number you count with x
