@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct ret_info
+struct _ret_info
 {
   int months;
   double contribution;
