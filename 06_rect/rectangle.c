@@ -53,12 +53,17 @@ rectangle intersection(rectangle r1, rectangle r2) {
      r1.height = r1.width = 0;
   }
   else{
-    r1.x = max(r1.x, r2.x) ;
-    r1.y = max(r1.y, r2.y) ;
+    //printf("r1== %d %d %d %d \n",r1.x, r1.y, r1.width, r1.height);
+    //printf("r2== %d %d %d %d \n",r2.x, r2.y, r2.width, r2.height);
+    
+    
     int x2 = min(r1.x+r1.width, r2.x+r2.width) ;
     int y2 = min(r1.y+r1.height, r2.y+r2.height) ;
+    r1.x = max(r1.x, r2.x) ;
+    r1.y = max(r1.y, r2.y) ;
     r1.width = x2-r1.x ;
     r1.height = y2-r1.y ;
+    //printf("result== %d %d %d %d \n",r1.x, r1.y, r1.width, r1.height);
   }
   return r1;
 }
