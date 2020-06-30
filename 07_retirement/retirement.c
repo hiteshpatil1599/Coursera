@@ -8,7 +8,7 @@ struct _ret_info
   double rate_of_return;
 };
 
-typedef struct ret_info retire_info;
+typedef struct _ret_info retire_info;
 
 void printDet(int year, int month, double balance){
    printf("Age %3d month %2d you have $%.2lf\n",year, month, balance) ;
