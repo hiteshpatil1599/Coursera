@@ -1,14 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct _ret_info
+struct _retire_info
 {
   int months;
   double contribution;
   double rate_of_return;
 };
 
-typedef struct _ret_info retire_info;
+typedef struct _retire_info retire_info;
 
 void printDet(int year, int month, double balance){
    printf("Age %3d month %2d you have $%.2lf\n",year, month, balance) ;
