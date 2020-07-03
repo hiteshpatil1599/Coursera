@@ -1,0 +1,7 @@
+VAR = 0
+a: b c
+	./isPrime-broken2 $(VAR)
+b:
+	./isPrime-correct $(VAR)
+c:
+	./isPrime-broken1 $(VAR)
