@@ -111,26 +111,26 @@ card_t card_from_letters(char value_let, char suit_let) {
   card_t temp;
   switch(value_let)
     {
-    case 'A':temp.value=14;
-    case 'K':temp.value=13;
-    case 'Q':temp.value=12;
-    case 'J':temp.value=11;
-    case '2':temp.value=2;
-    case '3':temp.value=3;
-    case '4':temp.value=4;
-    case '5':temp.value=5;
-    case '6':temp.value=6;
-    case '7':temp.value=7;
-    case '8':temp.value=8;
-    case '9':temp.value=9;
-    case '0':temp.value=10;
+    case 'A':temp.value=14;break;
+    case 'K':temp.value=13;break;
+    case 'Q':temp.value=12;break;
+    case 'J':temp.value=11;break;
+    case '2':temp.value=2;break;
+    case '3':temp.value=3;break;
+    case '4':temp.value=4;break;
+    case '5':temp.value=5;break;
+    case '6':temp.value=6;break;
+    case '7':temp.value=7;break;
+    case '8':temp.value=8;break;
+    case '9':temp.value=9;break;
+    case '0':temp.value=10;break;
     }
   switch(suit_let)
     {
-    case 's':temp.suit=0;
-    case 'h':temp.suit=1;
-    case 'd':temp.suit=2;
-    case 'c':temp.suit=3;
+    case 's':temp.suit=0;break;
+    case 'h':temp.suit=1;break;
+    case 'd':temp.suit=2;break;
+    case 'c':temp.suit=3;break;
     }
   return temp;
 }
