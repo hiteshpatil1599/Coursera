@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
-unsigned power(unsigned, unsigned);
+#include"power.c"
+
+//unsigned power(unsigned, unsigned);
 
 int main()
 {
