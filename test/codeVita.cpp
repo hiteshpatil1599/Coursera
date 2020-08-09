@@ -6,6 +6,8 @@ using namespace std;
 
 intSize getMin(intSize* Rank, intSize N)
 {
+  if(N==0)
+    return 0;
   intSize MaxCount= 0;
   intSize count;
   intSize index= 0;
@@ -17,7 +19,7 @@ intSize getMin(intSize* Rank, intSize N)
 	{
 	  count++;
 	}
-      else
+      else if(Rank[index]> Rank[index+1])
 	{
 	  count= 1;
 	}
