@@ -10,19 +10,22 @@ intSize getMin(intSize* Rank, intSize N)
   intSize count;
   intSize index= 0;
 
-  count= 1;
-  while(index< N)
+  count= MaxCount= 1;
+  while(index < N-1)
     {
-      count=1 ;
-      do
+      if(Rank[index]< Rank[index+1])
 	{
-	  index++;
-	  MaxCount+= count;
-	  count++ ;
-	}while(index< N && Rank[index]<Rank[index+1]);
-	    }
-      return MaxCount;
+	  count++;
+	}
+      else
+	{
+	  count= 1;
+	}
+      index++;
+      MaxCount+= count;
     }
+  return MaxCount;
+}
   typedef struct
   {
     intSize numOfEmployes;
