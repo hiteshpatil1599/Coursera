@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include <time.h>
+//#include <time.h>
 #include "deck.h"
 
 void print_hand(deck_t * hand){
@@ -24,8 +24,8 @@ void shuffle(deck_t * d){
   int Num= d->n_cards;
   for(;n< Num;n++)
     {
-      srand(clock());
-      newPos= rand()%Num;
+      //srand(clock());
+      newPos= random()%Num;
       temp= d->cards[n];
       d->cards[n]= d->cards[newPos];
       d->cards[newPos]= temp;
