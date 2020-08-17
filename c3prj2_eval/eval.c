@@ -201,7 +201,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 	case FOUR_OF_A_KIND:
 	  
 	case FULL_HOUSE:
-	  return c1.cards[0][0].value - c2.cards[0][0].value;
+	 
 	  
 	case FLUSH:
 	  for(int i=0,flag=0; i<5; i++)
@@ -210,7 +210,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 	  return 0;
 	  
 	case STRAIGHT:
-	  return c1.cards[0][0].value - c2.cards[0][0].value;
+	 
 	  
 	case THREE_OF_A_KIND:
 	  
