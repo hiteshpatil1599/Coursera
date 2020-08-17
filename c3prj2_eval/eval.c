@@ -34,13 +34,13 @@ suit_t flush_suit(deck_t * hand) {
       if((*(hand->cards+i))->suit == 3)
 	c++;
     }
-  if(s==5)
+  if(s>=5)
     return SPADES;
-  if(h==5)
+  if(h>=5)
     return HEARTS;
-  if(d==5)
+  if(d>=5)
     return DIAMONDS;
-  if(c==5)
+  if(c>=5)
     return CLUBS;
   return NUM_SUITS;
 }
