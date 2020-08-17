@@ -194,22 +194,10 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   
   if(c1.ranking == c2.ranking)
     {
-      switch(c1.ranking)
-	{
-	case STRAIGHT_FLUSH:
-	case FOUR_OF_A_KIND:
-	case FULL_HOUSE:
-	case FLUSH:
-	case STRAIGHT:
-	case THREE_OF_A_KIND:
-       	case TWO_PAIR:
-	case PAIR:	  
-	case NOTHING:
-	  for(int i=0,flag=0; i<5; i++)
-	    if((flag= c1.cards[i][0].value - c2.cards[i][0].value))
-	      return flag;
-	  return 0;
-	}
+      for(int i=0,flag=0; i<5; i++)
+	if((flag= c1.cards[i][0].value - c2.cards[i][0].value))
+	  return flag;
+      return 0; 
     }
   return c2.ranking - c1.ranking;
 }
