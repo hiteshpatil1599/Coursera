@@ -5,9 +5,12 @@
 #include "deck.h"
 
 void print_hand(deck_t * hand){
-  int n= 0;
-  for(;n< hand->n_cards;n++)
-    print_card(**((hand->cards)+n));
+
+  for(int n=0; n<hand->n_cards; n++)
+    {
+      print_card(**((hand->cards)+n));
+      printf(" ");
+    }
 }
 
 int deck_contains(deck_t * d, card_t c) {
