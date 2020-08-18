@@ -1,4 +1,4 @@
-Grading at Mon Aug 17 10:23:31 UTC 2020
+Grading at Tue Aug 18 04:11:31 UTC 2020
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -23,6 +23,9 @@ Your file matched the expected output
  - Testcase passed
 Testcase 5: Trying hands with straights
  Checking the output 
+Line_21_did_not_match
+Line_66_did_not_match
+Line_88_did_not_match
 Line_134_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
@@ -46,7 +49,7 @@ Js 0c 9s 8d 7c 							Js 0c 9s 8d 7c
  - 5 cards used for hand: Js 0c 9s 8d 7c 			 - 5 cards used for hand: Js 0c 9s 8d 7c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!							Hand 2 wins!
+Hand 2 wins!						      |	Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -91,7 +94,7 @@ Kc Qh Qs Jd Js 0c 0s 9d 					Kc Qh Qs Jd Js 0c 0s 9d
  - 5 cards used for hand: Kc Qh Jd 0c 9d 			 - 5 cards used for hand: Kc Qh Jd 0c 9d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!							Hand 2 wins!
+Hand 2 wins!						      |	Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -113,7 +116,7 @@ Kc Qh 8c 7h 6c 5d 4s 						Kc Qh 8c 7h 6c 5d 4s
  - 5 cards used for hand: 8c 7h 6c 5d 4s 			 - 5 cards used for hand: 8c 7h 6c 5d 4s 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!							Hand 1 wins!
+Hand 1 wins!						      |	Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -159,7 +162,7 @@ Jh 0s 9c 8s 7c 6c 5d 						Jh 0s 9c 8s 7c 6c 5d
  - 5 cards used for hand: Jh 0s 9c 8s 7c 			 - 5 cards used for hand: Jh 0s 9c 8s 7c 
 Comparison : 							Comparison : 
 --------------							--------------
-Tie							      |	Hand 1 wins!
+Tie							      |	Hand 2 wins!
 ============================					============================
 Testcase 6: Trying hands with flushes
  Checking the output 
