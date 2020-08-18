@@ -1,4 +1,4 @@
-Grading at Tue Aug 18 05:25:42 UTC 2020
+Grading at Tue Aug 18 05:29:19 UTC 2020
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -11,89 +11,8 @@ Your file matched the expected output
  - Testcase passed
 Testcase 2: Trying hands with pairs
  Checking the output 
-Line_79_did_not_match
-Your file did not match the expected ouput
- - Output did not match, testcase failed
-Hand 1:								Hand 1:
---------							--------
-Ac As Kh 9d 8c 3h 						Ac As Kh 9d 8c 3h 
- - No flush							 - No flush
- - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: PAIR				 - evaluate_hand's ranking: PAIR
- - 5 cards used for hand: Ac As Kh 9d 8c 			 - 5 cards used for hand: Ac As Kh 9d 8c 
-Hand 2:								Hand 2:
---------							--------
-Kc Ks Js 9h 2c 							Kc Ks Js 9h 2c 
- - No flush							 - No flush
- - The most of a kind is 2 of a kind (at index 0 / value K)	 - The most of a kind is 2 of a kind (at index 0 / value K)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: PAIR				 - evaluate_hand's ranking: PAIR
- - 5 cards used for hand: Kc Ks Js 9h 2c 			 - 5 cards used for hand: Kc Ks Js 9h 2c 
-Comparison : 							Comparison : 
---------------							--------------
-Hand 1 wins!							Hand 1 wins!
-============================					============================
-Hand 1:								Hand 1:
---------							--------
-Ac As Qd 9d 8c 3h 						Ac As Qd 9d 8c 3h 
- - No flush							 - No flush
- - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: PAIR				 - evaluate_hand's ranking: PAIR
- - 5 cards used for hand: Ac As Qd 9d 8c 			 - 5 cards used for hand: Ac As Qd 9d 8c 
-Hand 2:								Hand 2:
---------							--------
-Ad Ah Qh Js 9c 2h 						Ad Ah Qh Js 9c 2h 
- - No flush							 - No flush
- - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: PAIR				 - evaluate_hand's ranking: PAIR
- - 5 cards used for hand: Ad Ah Qh Js 9c 			 - 5 cards used for hand: Ad Ah Qh Js 9c 
-Comparison : 							Comparison : 
---------------							--------------
-Hand 2 wins!							Hand 2 wins!
-============================					============================
-Hand 1:								Hand 1:
---------							--------
-As Kd Kh 7d 3s 2c 						As Kd Kh 7d 3s 2c 
- - No flush							 - No flush
- - The most of a kind is 2 of a kind (at index 1 / value K)	 - The most of a kind is 2 of a kind (at index 1 / value K)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: PAIR				 - evaluate_hand's ranking: PAIR
- - 5 cards used for hand: Kd Kh As 7d 3s 			 - 5 cards used for hand: Kd Kh As 7d 3s 
-Hand 2:								Hand 2:
---------							--------
-As Kh Qc Qd 9d 5c 						As Kh Qc Qd 9d 5c 
- - No flush							 - No flush
- - The most of a kind is 2 of a kind (at index 2 / value Q)	 - The most of a kind is 2 of a kind (at index 2 / value Q)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: PAIR				 - evaluate_hand's ranking: PAIR
- - 5 cards used for hand: Qc Qd As Kh 9d 			 - 5 cards used for hand: Qc Qd As Kh 9d 
-Comparison : 							Comparison : 
---------------							--------------
-Hand 1 wins!							Hand 1 wins!
-============================					============================
-Hand 1:								Hand 1:
---------							--------
-Js 9h 7c 5c 5d 4s 						Js 9h 7c 5c 5d 4s 
- - No flush							 - No flush
- - The most of a kind is 2 of a kind (at index 3 / value 5)	 - The most of a kind is 2 of a kind (at index 3 / value 5)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: PAIR				 - evaluate_hand's ranking: PAIR
- - 5 cards used for hand: 5c 5d Js 9h 7c 			 - 5 cards used for hand: 5c 5d Js 9h 7c 
-Hand 2:								Hand 2:
---------							--------
-Jd 9h 7c 6h 5h 5s 						Jd 9h 7c 6h 5h 5s 
- - No flush							 - No flush
- - The most of a kind is 2 of a kind (at index 4 / value 5)	 - The most of a kind is 2 of a kind (at index 4 / value 5)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: PAIR				 - evaluate_hand's ranking: PAIR
- - 5 cards used for hand: 5h 5s Jd 9h 7c 			 - 5 cards used for hand: 5h 5s Jd 9h 7c 
-Comparison : 							Comparison : 
---------------							--------------
-Tie							      |	Hand 2 wins!
-============================					============================
+Your file matched the expected output
+ - Testcase passed
 Testcase 3: Trying hands with 2 pairs
  Checking the output 
 Line_139_did_not_match
