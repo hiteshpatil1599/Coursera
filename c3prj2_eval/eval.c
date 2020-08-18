@@ -100,7 +100,7 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
 	    if(cards[i][0].value==value&&cards[i][0].suit==fs)
 	      value--;
 	  if(value<=1)
-	    return 1;
+	    return -1;
 	}
       if(cards[index][0].suit==fs )
 	{
