@@ -200,7 +200,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   if(c1.ranking == c2.ranking)
     {
       if(c1.ranking==STRAIGHT)
-	return c1.cards[0][0].value - c2.cards[0][0].value;
+	return card_ptr_comp(c1.cards,c2.cards);
       
       for(int i=0,flag=0; i<5; i++)
 	if((flag= c1.cards[i][0].value - c2.cards[i][0].value))
