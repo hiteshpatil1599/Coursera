@@ -1,4 +1,4 @@
-Grading at Tue Aug 18 04:46:00 UTC 2020
+Grading at Tue Aug 18 05:11:09 UTC 2020
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -7,111 +7,8 @@ cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o cards.o cards.c
 gcc -o test-eval -ggdb3 deck.o deck-c4.o eval-c4.o eval.o test-eval.o cards.o input.o future.o
 Testcase 1: Trying hands with nothing
  Checking the output 
-Line_39_did_not_match
-Line_79_did_not_match
-Line_99_did_not_match
-Your file did not match the expected ouput
- - Output did not match, testcase failed
-Hand 1:								Hand 1:
---------							--------
-As Qd 9h 7c 3d 2s 						As Qd 9h 7c 3d 2s 
- - No flush							 - No flush
- - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: NOTHING				 - evaluate_hand's ranking: NOTHING
- - 5 cards used for hand: As Qd 9h 7c 3d 			 - 5 cards used for hand: As Qd 9h 7c 3d 
-Hand 2:								Hand 2:
---------							--------
-Kc Js 7h 6c 4d 2h 						Kc Js 7h 6c 4d 2h 
- - No flush							 - No flush
- - The most of a kind is 1 of a kind (at index 0 / value K)	 - The most of a kind is 1 of a kind (at index 0 / value K)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: NOTHING				 - evaluate_hand's ranking: NOTHING
- - 5 cards used for hand: Kc Js 7h 6c 4d 			 - 5 cards used for hand: Kc Js 7h 6c 4d 
-Comparison : 							Comparison : 
---------------							--------------
-Hand 1 wins!							Hand 1 wins!
-============================					============================
-Hand 1:								Hand 1:
---------							--------
-As Qd 9h 7c 3d 2s 						As Qd 9h 7c 3d 2s 
- - No flush							 - No flush
- - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: NOTHING				 - evaluate_hand's ranking: NOTHING
- - 5 cards used for hand: As Qd 9h 7c 3d 			 - 5 cards used for hand: As Qd 9h 7c 3d 
-Hand 2:								Hand 2:
---------							--------
-As Qd 9h 8c 4d 2s 						As Qd 9h 8c 4d 2s 
- - No flush							 - No flush
- - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: NOTHING				 - evaluate_hand's ranking: NOTHING
- - 5 cards used for hand: As Qd 9h 8c 4d 			 - 5 cards used for hand: As Qd 9h 8c 4d 
-Comparison : 							Comparison : 
---------------							--------------
-Hand 2 wins!						      |	Tie
-============================					============================
-Hand 1:								Hand 1:
---------							--------
-Kc Js 7h 6c 4d 2h 						Kc Js 7h 6c 4d 2h 
- - No flush							 - No flush
- - The most of a kind is 1 of a kind (at index 0 / value K)	 - The most of a kind is 1 of a kind (at index 0 / value K)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: NOTHING				 - evaluate_hand's ranking: NOTHING
- - 5 cards used for hand: Kc Js 7h 6c 4d 			 - 5 cards used for hand: Kc Js 7h 6c 4d 
-Hand 2:								Hand 2:
---------							--------
-Kh Jd 6s 5c 4d 2h 						Kh Jd 6s 5c 4d 2h 
- - No flush							 - No flush
- - The most of a kind is 1 of a kind (at index 0 / value K)	 - The most of a kind is 1 of a kind (at index 0 / value K)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: NOTHING				 - evaluate_hand's ranking: NOTHING
- - 5 cards used for hand: Kh Jd 6s 5c 4d 			 - 5 cards used for hand: Kh Jd 6s 5c 4d 
-Comparison : 							Comparison : 
---------------							--------------
-Hand 1 wins!							Hand 1 wins!
-============================					============================
-Hand 1:								Hand 1:
---------							--------
-9s 8s 7s 6s 2c 							9s 8s 7s 6s 2c 
- - No flush							 - No flush
- - The most of a kind is 1 of a kind (at index 0 / value 9)	 - The most of a kind is 1 of a kind (at index 0 / value 9)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: NOTHING				 - evaluate_hand's ranking: NOTHING
- - 5 cards used for hand: 9s 8s 7s 6s 2c 			 - 5 cards used for hand: 9s 8s 7s 6s 2c 
-Hand 2:								Hand 2:
---------							--------
-As 9h 8c 7d 6d 							As 9h 8c 7d 6d 
- - No flush							 - No flush
- - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: NOTHING				 - evaluate_hand's ranking: NOTHING
- - 5 cards used for hand: As 9h 8c 7d 6d 			 - 5 cards used for hand: As 9h 8c 7d 6d 
-Comparison : 							Comparison : 
---------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
-============================					============================
-Hand 1:								Hand 1:
---------							--------
-As Qs 9s 6d 4s 							As Qs 9s 6d 4s 
- - No flush							 - No flush
- - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: NOTHING				 - evaluate_hand's ranking: NOTHING
- - 5 cards used for hand: As Qs 9s 6d 4s 			 - 5 cards used for hand: As Qs 9s 6d 4s 
-Hand 2:								Hand 2:
---------							--------
-Ac Kd Qh 3s 2s 							Ac Kd Qh 3s 2s 
- - No flush							 - No flush
- - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
- - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: NOTHING				 - evaluate_hand's ranking: NOTHING
- - 5 cards used for hand: Ac Kd Qh 3s 2s 			 - 5 cards used for hand: Ac Kd Qh 3s 2s 
-Comparison : 							Comparison : 
---------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
-============================					============================
+Your file matched the expected output
+ - Testcase passed
 Testcase 2: Trying hands with pairs
  Checking the output 
 Line_39_did_not_match
