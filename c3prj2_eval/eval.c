@@ -163,7 +163,7 @@ hand_eval_t build_hand_from_match(deck_t * hand,
 int compare_hands(deck_t * hand1, deck_t * hand2) {
 
   hand_eval_t c1, c2;
-  
+  int flag;
   for(size_t i=1; i<hand1->n_cards-1; i++)
     {
       for(size_t j=0; j<hand1->n_cards-i; j++)
@@ -199,6 +199,17 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   
   if(c1.ranking == c2.ranking)
     {
+      if(c1.ranking == NOTHING)
+	{
+	  for(int i=0; i<5; i++)
+	    if((flag= c1.cards[0][0].value-c2.cards[0][0].value))
+	      return flag;
+	  for(int i=0; i<5; i++)
+	    if((flag= card_ptr_comp(c1.cards, c2.cards)))
+	      return flag;
+	  return 0;
+	}
+      
       if(c1.ranking==STRAIGHT)
 	return card_ptr_comp(c2.cards, c1.cards);
       
