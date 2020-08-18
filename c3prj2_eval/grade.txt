@@ -1,4 +1,4 @@
-Grading at Tue Aug 18 06:17:55 UTC 2020
+Grading at Tue Aug 18 06:20:04 UTC 2020
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -175,9 +175,6 @@ Your file matched the expected output
  - Testcase passed
 Testcase 9: Trying hands with straight flushes
  Checking the output 
-Line_21_did_not_match
-Line_47_did_not_match
-Line_71_did_not_match
 Line_94_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
@@ -201,7 +198,7 @@ Kh Qh Jh 0h 9h 							Kh Qh Jh 0h 9h
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -227,7 +224,7 @@ Kh Qh Jh 0h 9h 8h 7h 						Kh Qh Jh 0h 9h 8h 7h
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -251,7 +248,7 @@ Ad Kh Qh Jh Js 0h 9h 						Ad Kh Qh Jh Js 0h 9h
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -274,7 +271,7 @@ Ac 6c 5c 4c 3c 2c 						Ac 6c 5c 4c 3c 2c
  - 5 cards used for hand: 5c 4c 3c 2c Ac 			 - 5 cards used for hand: 5c 4c 3c 2c Ac 
 Comparison : 							Comparison : 
 --------------							--------------
-Tie							      |	Hand 1 wins!
+Tie							      |	Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
