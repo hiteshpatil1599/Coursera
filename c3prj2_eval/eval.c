@@ -83,16 +83,26 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
 
   if(fs != NUM_SUITS)
     {
+
       if(cards[index][0].value==14 && cards[index][0].suit==fs )
 	{
-	  value=5;
+	  value=13;
 	  for(size_t i=index+1;i<n;i++)
 	    if(cards[i][0].value==value&&cards[i][0].suit==fs)
 	      value--;
-	  if(value==1)
-	    return -1;
+	  if(value<=9)
+	    return 1;
 	}
-      if(cards[index][0].suit == fs)
+      if(cards[index][0].value==14 && cards[index][0].suit==fs )
+	{
+	  value= 5;
+	  for(size_t i=index+1;i<n;i++)
+	    if(cards[i][0].value==value&&cards[i][0].suit==fs)
+	      value--;
+	  if(value<=1)
+	    return 1;
+	}
+      if(cards[index][0].suit==fs )
 	{
 	  value= cards[index][0].value-1;
 	  for(size_t i=index+1;i<n;i++)
