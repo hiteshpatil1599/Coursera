@@ -286,10 +286,10 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 	  for(int i=0; i<5; i++)
 	    if((flag= c1.cards[i][0].value-c2.cards[i][0].value))
 	      return flag;
-	  //if all cards are same. Then tie.
-	  //for(int i=0; i<5; i++)
-	  //if((flag= card_ptr_comp(c1.cards, c2.cards)))
-	  //return flag;
+	  
+	  for(int i=0; i<5; i++)
+	  if((flag= card_ptr_comp(c1.cards, c2.cards)))
+	    return flag;
 	  return 0;
 	}
 
