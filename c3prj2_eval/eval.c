@@ -398,7 +398,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 	  return flag;
       return 0; 
     }
-  return c2.ranking - c1.ranking;
+  return c1.ranking - c2.ranking;
 }
 
 
