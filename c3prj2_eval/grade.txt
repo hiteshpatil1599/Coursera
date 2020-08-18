@@ -1,4 +1,4 @@
-Grading at Tue Aug 18 05:11:09 UTC 2020
+Grading at Tue Aug 18 05:25:42 UTC 2020
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -11,7 +11,6 @@ Your file matched the expected output
  - Testcase passed
 Testcase 2: Trying hands with pairs
  Checking the output 
-Line_39_did_not_match
 Line_79_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
@@ -53,7 +52,7 @@ Ad Ah Qh Js 9c 2h 						Ad Ah Qh Js 9c 2h
  - 5 cards used for hand: Ad Ah Qh Js 9c 			 - 5 cards used for hand: Ad Ah Qh Js 9c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -93,7 +92,7 @@ Jd 9h 7c 6h 5h 5s 						Jd 9h 7c 6h 5h 5s
  - 5 cards used for hand: 5h 5s Jd 9h 7c 			 - 5 cards used for hand: 5h 5s Jd 9h 7c 
 Comparison : 							Comparison : 
 --------------							--------------
-Tie							      |	Hand 1 wins!
+Tie							      |	Hand 2 wins!
 ============================					============================
 Testcase 3: Trying hands with 2 pairs
  Checking the output 
