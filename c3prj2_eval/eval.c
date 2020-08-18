@@ -74,7 +74,101 @@ ssize_t  find_secondary_pair(deck_t * hand,
     }
   return -1;
 }
+int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
+  if(fs==NUM_SUITS)
+    {
+      int count=0;
+      for(int i=index;i<hand->n_cards-1;i++)
+	{
+	  int diff=hand->cards[i]->value-hand->cards[i+1]->value;
+	  if(diff>1)
+	    break;
+	  if(count==4)
+	    break;
+	  if(diff==1)
+	    count++;
+	}
+      if(count==4)
+	return 1;
 
+      if(hand->cards[index]->value==VALUE_ACE)       //func for ace low straight
+	{
+	  count=0;
+	  for(int i=index+1;i<hand->n_cards-1;i++)
+	    {
+	      if(hand->cards[index]->value-hand->cards[index+1]->value>1&&hand->cards[index+1]->value!=5)
+		break;
+	      if(hand->cards[i]->value==5)
+		count=1;
+	      int diff=hand->cards[i]->value-hand->cards[i+1]->value;
+	      if(diff==1&&count)
+		count++;
+	      if(diff>1&&!count)
+		break;
+	    }
+	  if(count==4)
+	    return -1;
+	}
+      return 0;
+    }
+  else
+    {
+      int count=0;
+      int count_suit[5]={0};
+      for(int i=index;i<hand->n_cards;i++)
+	count_suit[hand->cards[i]->suit]++;
+      suit_t suspect=NUM_SUITS;
+      for(int i=0;i<5;i++)
+	if(count_suit[i]>=5)
+	  {
+	    suspect=i;
+	    break;
+	  }
+      if(suspect!=NUM_SUITS)
+	{
+	  int temp_value=-1;
+	  if(hand->cards[index]->suit!=suspect)
+	    return 0;
+	  for(int i=index;i<hand->n_cards;i++)
+	    {
+	      int diff=temp_value-hand->cards[i]->value;
+	      int diff_suit=suspect-hand->cards[i]->suit;
+	      if(diff>1)
+		break;
+	      if(count==4)
+		break;
+	      if(diff==1&&!diff_suit)
+		count++;
+	      if(hand->cards[i]->suit==suspect)
+		temp_value=hand->cards[i]->value;
+	    }
+	  if(count==4)
+	    return 1;
+	}
+      if(hand->cards[index]->value==VALUE_ACE)       //func for ace low straight flush
+	{
+	  count=0;
+	  int temp_value=-1;
+	  for(int i=index;i<hand->n_cards;i++)
+	    {
+	      if(hand->cards[i]->value==5&&hand->cards[i]->suit==hand->cards[index]->suit)
+		count=1;
+	      int diff=temp_value-hand->cards[i]->value;
+	      int diff_suit=suspect-hand->cards[i]->suit;
+	      if(diff==1&&!diff_suit&&count)
+		count++;
+	      //    if(diff>1)
+	      //        break;
+	      if(hand->cards[i]->suit==suspect&&hand->cards[i]->value<=5)
+		temp_value=hand->cards[i]->value;
+	    }
+	  if(count==4)
+	    return -1;
+	}
+      return 0;
+    }
+}
+/*
 int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
 
   card_t** cards= hand->cards;
@@ -102,7 +196,7 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
 	  if(value<=9)
 	    return 1;
 	}
-      /*      if(cards[index][0].value==14 && cards[index][0].suit==fs )
+      FROM_HERE      if(cards[index][0].value==14 && cards[index][0].suit==fs )
 	{
 	  value= 5;
 	  for(size_t i=index+1;i<n;i++)
@@ -110,7 +204,8 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
 	      value--;
 	  if(value<=1)
 	    return -1;
-	    }*/
+	    }
+	   TILL_HERE
       if(cards[index][0].suit==fs )
 	{
 	  value= cards[index][0].value-1;
@@ -145,7 +240,7 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
 	    return 1;
 	}
 
-      /*      if(cards[index][0].value==14)
+      FROM_HERE      if(cards[index][0].value==14)
 	{
 	  value=5;
 	  for(size_t i=index+1;i<n;i++)
@@ -155,7 +250,7 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
 	    return -1;
 	}
       
-      */
+      TILL_HERE
       value= cards[index][0].value-1;
       for(size_t i=index+1;i<n;i++)
 	if(cards[i][0].value==value)
@@ -165,7 +260,7 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
     }
   return 0;
 }
-
+*/
 hand_eval_t build_hand_from_match(deck_t * hand,
 				  unsigned n,
 				  hand_ranking_t what,
