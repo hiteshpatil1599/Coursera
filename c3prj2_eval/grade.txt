@@ -1,4 +1,4 @@
-Grading at Tue Aug 18 04:27:37 UTC 2020
+Grading at Tue Aug 18 04:46:00 UTC 2020
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -8,7 +8,8 @@ gcc -o test-eval -ggdb3 deck.o deck-c4.o eval-c4.o eval.o test-eval.o cards.o in
 Testcase 1: Trying hands with nothing
  Checking the output 
 Line_39_did_not_match
-Line_59_did_not_match
+Line_79_did_not_match
+Line_99_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
@@ -69,7 +70,7 @@ Kh Jd 6s 5c 4d 2h 						Kh Jd 6s 5c 4d 2h
  - 5 cards used for hand: Kh Jd 6s 5c 4d 			 - 5 cards used for hand: Kh Jd 6s 5c 4d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -89,7 +90,7 @@ As 9h 8c 7d 6d 							As 9h 8c 7d 6d
  - 5 cards used for hand: As 9h 8c 7d 6d 			 - 5 cards used for hand: As 9h 8c 7d 6d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!							Hand 2 wins!
+Hand 2 wins!						      |	Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -109,7 +110,7 @@ Ac Kd Qh 3s 2s 							Ac Kd Qh 3s 2s
  - 5 cards used for hand: Ac Kd Qh 3s 2s 			 - 5 cards used for hand: Ac Kd Qh 3s 2s 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!							Hand 2 wins!
+Hand 2 wins!						      |	Hand 1 wins!
 ============================					============================
 Testcase 2: Trying hands with pairs
  Checking the output 
